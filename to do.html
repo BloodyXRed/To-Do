@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="to do.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task</h1>
+        <br>
+        <p>New Task</p>
+        <br>
+        <input type="text" placeholder="Enter your Task here" id="inputTask">
+        <p class="error inputError"></p>
+        <br><br>
+        <button  id="addTask">Add Task</button>
+    </div>
+    <div class="result">
+        <h1>Tasks</h1>
+        <br>
+        <p>Filter Tasks</p>
+        <br>
+        <input onkeyup="searchData(this.value)" type="Text" placeholder="Search Task" id="FilterTasks">
+        <br><br> 
+        <button id="clear">Clear Tasks</button>
+        <br><br>
+        <section class="liste">
+            <ul id="unolist">
+                <img  id="done" src="check-mark.png">
+                <img onclick="deleteTask()" id="cross" src="remove.png">
+            </ul>
+        </section>
+    </div>
+    <script src="to do.js"></script>
+</body>
+</html>
