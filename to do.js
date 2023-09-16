@@ -18,6 +18,7 @@ window.onload=showdata()
 
 addTask.addEventListener("click",function(){
     let tsk={
+        isCompleted:false,
         tasktitle:inputTask.value,
     }
     clearError("inputError");
@@ -34,7 +35,7 @@ addTask.addEventListener("click",function(){
 function showdata(){
     let li="";
     for(let i=0;i<Array.length;i++){
-        li += `<ul class="unolist"><li class="taskk">${Array[i].tasktitle}
+        li += `<ul class="unolist ${Array[i].isCompleted ? 'completed' : ''}"><li class="taskk">${Array[i].tasktitle}
         <img  onclick="taskDone(${i})" id="done" src="check-mark.png">
         <img onclick="deleteTask(${i})" id="cross" src="remove.png"></li></ul>`
     }
@@ -54,8 +55,16 @@ function deleteTask(i){
 }
 
 function taskDone(i){
-    let taskk=document.getElementsByClassName("taskk");
-    unolist[i].classList.toggle("completed");
+    Array[i].isCompleted = !Array[i].isCompleted; 
+
+    if (Array[i].isCompleted) {
+        unolist[i].classList.add("completed"); 
+    } else {
+        unolist[i].classList.remove("completed"); 
+    }
+
+    localStorage.Task = JSON.stringify(Array);
+    showdata();
 }
 
 function searchData(value){
