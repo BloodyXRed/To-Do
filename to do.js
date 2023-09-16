@@ -71,7 +71,7 @@ function searchData(value){
     let li="";
     for(let i=0;i<Array.length;i++){
     if(Array[i].tasktitle.includes(value.toLowerCase())){
-        li += `<ul class="unolist"><li class="taskk">${Array[i].tasktitle} 
+        li += `<ul class="unolist ${Array[i].isCompleted ? 'completed' : ''}"><li class="taskk">${Array[i].tasktitle} 
         <img  onclick="taskDone(${i})" id="done" src="check-mark.png">
         <img onclick="deleteTask(${i})" id="cross" src="remove.png"></li></ul>`
     document.querySelector(".liste").innerHTML = li;
