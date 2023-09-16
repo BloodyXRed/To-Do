@@ -135,6 +135,7 @@ img{
     }
     .container{
         margin-top: 10px;
+        
     }
     .error{
         font-size: 15px;
@@ -153,5 +154,8 @@ img{
     ul{
         height: 1.5rem;
         font-size: 20px;
+    }
+    .result{
+        margin-bottom: 1.5rem;
     }
 }
