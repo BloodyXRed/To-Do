@@ -10,6 +10,7 @@ body{
 :root{
     --colorG:rgba(28, 223, 158, 0.95);
     --colorGG:rgba(11, 173, 119, 0.95);
+    --colorBG:linear-gradient(-45deg,rgba(69, 226, 176, 0.95),rgba(0, 240, 160, 0.95))
 }
 div{
     padding: 30px 70px;
@@ -60,7 +61,7 @@ button{
     transition: 0.5s;
 }
 #addTask{
-    background:linear-gradient(-45deg,rgba(69, 226, 176, 0.95),rgba(0, 240, 160, 0.95));
+    background:var(--colorBG);
 }
 button:hover{
     scale: 1.05;
@@ -72,7 +73,7 @@ button:hover{
     background:linear-gradient(-45deg,rgba(255, 46, 46, 0.95),rgba(255, 61, 61, 0.95));
 }
 ul{
-    background:linear-gradient(-45deg,rgba(69, 226, 176, 0.95),rgba(0, 240, 160, 0.95));
+    background:var(--colorBG);
     font-size: large;
     color: black;
     font-weight: 550;
