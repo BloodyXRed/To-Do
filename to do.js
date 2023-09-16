@@ -87,4 +87,3 @@ function showError(errorElement,errorMessage){
 function clearError(errorElement){
     document.querySelector("."+errorElement).style.display="none";
 }
-
